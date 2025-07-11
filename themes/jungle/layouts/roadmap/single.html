@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{ $slug := .Params.slug }}
+  {{ $roadmap := index site.Data.roadmaps $slug }}
+  <h2>{{ $roadmap.title }}</h2>
+  <ul>
+    {{ range $roadmap.nodes }}
+      <li>{{ .title }}</li>
+    {{ end }}
+  </ul>
+{{ end }}

@@ -1,0 +1,12 @@
+title: Web Development
+slug: webdev
+nodes:
+  - id: html
+    title: "Belajar HTML"
+    next: [css]
+  - id: css
+    title: "Belajar CSS"
+    next: [js]
+  - id: js
+    title: "JavaScript Dasar"
+    next: []
