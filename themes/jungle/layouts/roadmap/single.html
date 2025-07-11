@@ -2,9 +2,14 @@
   {{ $slug := .Params.slug }}
   {{ $roadmap := index site.Data.roadmaps $slug }}
   <h2>{{ $roadmap.title }}</h2>
-  <ul>
-    {{ range $roadmap.nodes }}
-      <li>{{ .title }}</li>
+
+  {{ range $index, $node := $roadmap.nodes }}
+    <div class="roadmap-node" id="{{ $node.id }}">
+      <strong>{{ $node.title }}</strong>
+    </div>
+
+    {{ if lt (add $index 1) (len $roadmap.nodes) }}
+      <div class="roadmap-connection">↓</div>
     {{ end }}
-  </ul>
+  {{ end }}
 {{ end }}
