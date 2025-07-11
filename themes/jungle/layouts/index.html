@@ -1,0 +1,8 @@
+{{ define "main" }}
+  <h2>📚 Daftar Roadmap</h2>
+  <ul>
+    {{ range site.Data.roadmaps }}
+      <li><a href="/roadmap/{{ .slug }}">{{ .title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}
