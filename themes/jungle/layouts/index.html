@@ -1,8 +1,12 @@
 {{ define "main" }}
-  <h2>📚 Daftar Roadmap</h2>
-  <ul>
-    {{ range site.Data.roadmaps }}
-      <li><a href="/roadmap/{{ .slug }}">{{ .title }}</a></li>
+  <h2>📚 Pilih Roadmap Kamu</h2>
+  <div class="card-container">
+    {{ range $key, $roadmap := site.Data.roadmaps }}
+      <div class="card">
+        <h3>{{ $roadmap.title }}</h3>
+        <a href="/roadmap/{{ $roadmap.slug }}" class="btn">Lihat Roadmap</a>
+      </div>
     {{ end }}
-  </ul>
+  </div>
 {{ end }}
+

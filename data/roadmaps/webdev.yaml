@@ -3,9 +3,12 @@ slug: webdev
 nodes:
   - id: html
     title: "Belajar HTML"
-    next: [css]
+    next: [css, sass]
   - id: css
     title: "Belajar CSS"
+    next: [js]
+  - id: sass
+    title: "Belajar SASS"
     next: [js]
   - id: js
     title: "JavaScript Dasar"
