@@ -1,5 +1,7 @@
 title: Web Development
 slug: webdev
+icon: 🖥️
+description: "Pelajari dasar-dasar pengembangan web dari HTML, CSS, hingga JavaScript."
 nodes:
   - id: html
     title: "Belajar HTML"

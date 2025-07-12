@@ -3,10 +3,11 @@
   <div class="card-container">
     {{ range $key, $roadmap := site.Data.roadmaps }}
       <div class="card">
+        <div class="card-icon">{{ $roadmap.icon }}</div>
         <h3>{{ $roadmap.title }}</h3>
+        <p>{{ $roadmap.description }}</p>
         <a href="/roadmap/{{ $roadmap.slug }}" class="btn">Lihat Roadmap</a>
       </div>
     {{ end }}
   </div>
 {{ end }}
-
