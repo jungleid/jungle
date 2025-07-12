@@ -5,13 +5,45 @@ description: "Pelajari dasar-dasar pengembangan web dari HTML, CSS, hingga JavaS
 nodes:
   - id: html
     title: "Belajar HTML"
+    content: |
+      HTML (HyperText Markup Language) adalah bahasa dasar untuk membangun halaman web.
+      Kamu akan belajar tentang tag, struktur DOM, dan semantik.
+
+      📚 Referensi:
+      - https://developer.mozilla.org/en-US/docs/Web/HTML
+      - https://www.w3schools.com/html/
+
     next: [css, sass]
   - id: css
     title: "Belajar CSS"
+    content: |
+      CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain dan mengatur tampilan halaman web.
+      Kamu akan belajar tentang selektor, properti, dan layout.
+
+      📚 Referensi:
+      - https://developer.mozilla.org/en-US/docs/Web/CSS
+      - https://www.w3schools.com/css/
+
     next: [js]
   - id: sass
     title: "Belajar SASS"
+    content: |
+      SASS (Syntactically Awesome Style Sheets) adalah preprocessor CSS yang memungkinkan kamu untuk menggunakan variabel, nested rules, dan mixins.
+      Kamu akan belajar bagaimana cara mengatur dan mengelola stylesheet dengan lebih efisien.
+
+      📚 Referensi:
+      - https://sass-lang.com/
+      - https://www.w3schools.com/sass/
+
     next: [js]
   - id: js
     title: "JavaScript Dasar"
+    content: |
+      JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif.
+      Kamu akan belajar tentang variabel, tipe data, dan fungsi.
+
+      📚 Referensi:
+      - https://developer.mozilla.org/en-US/docs/Web/JavaScript
+      - https://www.w3schools.com/js/
+
     next: []

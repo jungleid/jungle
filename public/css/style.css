@@ -138,3 +138,17 @@ a {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
+
+.node-detail {
+  background: #f9fafb;
+  border-left: 4px solid #22c55e;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #374151;
+  border-radius: 6px;
+}
+.node-detail a {
+  color: #16a34a;
+  text-decoration: underline;
+}

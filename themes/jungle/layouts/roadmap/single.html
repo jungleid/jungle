@@ -1,29 +1,39 @@
 {{ define "main" }}
   {{ $slug := .Params.slug }}
   {{ $roadmap := index site.Data.roadmaps $slug }}
-  <h2>{{ $roadmap.title }}</h2>
 
-  {{ range $node := $roadmap.nodes }}
-    <div class="roadmap-node" id="{{ $node.id }}">
-      <strong>{{ .title }}</strong>
-    </div>
+  <h1>{{ $roadmap.title }}</h1>
 
-    {{ if .next }}
-        {{ if eq (len .next) 1 }}
-            <div class="roadmap-connection">↓</div>
-        {{ else }}
-            <div class="branch-connector">⇣</div>
-            <div class="branch-wrapper">
-            {{ $nextNodes := where $roadmap.nodes "id" . }}
-            {{ with index $nextNodes 0 }}
-            <div class="roadmap-node" id="{{ .id }}">
-                <strong>{{ .title }}</strong>
-            </div>
-            {{ end }}
+  <div class="roadmap-flow">
+    {{ range $node := $roadmap.nodes }}
+      <div class="roadmap-node" id="{{ $node.id }}">
+        <strong>{{ $node.title }}</strong>
 
-            </div>
+        {{ if $node.content }}
+          <div class="node-detail">
+            {{ $node.content | markdownify }}
+          </div>
         {{ end }}
-    {{ end }}
 
-  {{ end }}
+        {{ if $node.next }}
+          <div class="branch-wrapper">
+            {{ range $nextId := $node.next }}
+              {{ $nextNodes := where $roadmap.nodes "id" $nextId }}
+              {{ $nextNode := index $nextNodes 0 }}
+
+              <div class="roadmap-node" id="{{ $nextNode.id }}">
+                <strong>{{ $nextNode.title }}</strong>
+
+                {{ if $nextNode.content }}
+                  <div class="node-detail">
+                    {{ $nextNode.content | markdownify }}
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
 {{ end }}
